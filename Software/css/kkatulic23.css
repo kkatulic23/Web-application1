@@ -1,0 +1,298 @@
+body {
+	margin: 0;
+	padding: 0 10% 0 10%;
+	font-family: system-ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #212529;
+	background-color: #eee;
+	overflow-x: hidden;
+	touch-action: pan-y;
+}
+/*model kutije 1*/
+section {
+	display: block;
+	margin-bottom: 2rem;
+	padding: 1rem;
+	background: white;
+	border-radius: 0.25rem;
+	box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+	border: 1px black solid;
+}
+header {
+	position: relative;
+	text-align: center;
+}
+header img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	max-width: 50px;
+	height: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+	font-weight: 900;
+	line-height: 1.2;
+}
+h1 {
+	font-size: calc(1.375rem + 1.5vw);
+	text-align: center;
+}
+h2 {
+	font-size: calc(1.325rem + 0.9vw);
+}
+h5 {
+	font-size: 1.25rem;
+}
+/*model kutije 2*/
+main {
+	border-top: 2px dashed black;
+	border-bottom: 2px dashed black;
+	padding: 10px;
+	margin: 2px;
+}
+footer img {
+	max-width: 100px;
+	height: auto;
+	margin-top: 20px;
+}
+nav {
+	position: relative;
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	padding: 0.5rem 1rem;
+	border-radius: 0.25rem;
+	margin-bottom: 2rem;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+nav > a,
+footer a {
+	color: #007bff;
+	text-decoration: none;
+	font-weight: 500;
+	transition: color 0.2s ease;
+}
+nav > a:hover {
+	color: #0056b3;
+}
+a.detalji {
+	text-decoration: none;
+	padding: 5px;
+	margin-top: 1rem;
+	border: 2px solid black;
+	background-color: aqua;
+	border-radius: 4px;
+}
+img.validacija {
+	position: absolute;
+	right: 10%;
+}
+#opcionalanAI {
+	display: none;
+}
+footer.fusnota {
+	color: #555;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+span {
+	font-style: italic;
+	color: #555;
+	margin-left: 5px;
+}
+p {
+	padding: 10px 10px 10px 0px;
+	margin-top: 0;
+	margin-bottom: 1rem;
+	text-align: justify;
+	text-justify: auto;
+}
+p.tekst,
+p.tekst ~ p {
+	color: #655543;
+}
+/*model kutije 3*/
+table {
+	width: 80%;
+	border-collapse: collapse;
+	border: 2px solid black;
+	padding: 2px;
+	margin: 5px 5px 5px 0px;
+}
+table td,
+table th,
+table td ~ th {
+	text-align: left;
+	word-wrap: break-word;
+	border: 2px solid black;
+	padding: 10px;
+	padding-right: 50px;
+	margin: 5px 5px 5px 0px;
+}
+table#CPP tr:nth-child(even) {
+	background-color: lightblue;
+}
+td.odradeno {
+	text-align: center;
+	vertical-align: middle;
+	color: rgb(38, 255, 0);
+	text-decoration: underline;
+}
+.uOkvir {
+	width: 540px;
+	height: 315px;
+}
+div.mini a {
+	text-decoration: none;
+}
+div.mini img {
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	padding: 5px;
+	width: 150px;
+}
+div.mini img:hover {
+	box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+.sredina {
+	text-align: center;
+}
+/*KLIZAČ*/
+.okvir-klizac {
+	position: relative;
+	height: 200px;
+	max-width: 450px;
+	margin: 10px 50px 10px 50px;
+	left: calc(50% - 275px);
+}
+.stavka-klizac {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 50px;
+	text-align: center;
+	opacity: 0;
+	transition: all 1s ease-in-out;
+}
+.strelica {
+	position: absolute;
+	top: 0;
+	display: block;
+	width: 50px;
+	height: 100%;
+	color: rgba(0, 0, 0, 0);
+	background: url("../resursi/slike/strelica.png") 50% 50% / 40px no-repeat;
+}
+.strelica-prethodna {
+	left: -50px;
+	transform: rotate(180deg);
+}
+.strelica-sljedeca {
+	right: -50px;
+}
+[id^="cilj-element"] {
+	display: none;
+}
+.stavka-1 {
+	z-index: 2;
+	opacity: 1;
+}
+*:target ~ .stavka-1 {
+	opacity: 0;
+}
+#cilj-element-1:target ~ .stavka-1 {
+	opacity: 1;
+}
+#cilj-element-2:target ~ .stavka-2,
+#cilj-element-3:target ~ .stavka-3 {
+	z-index: 3;
+	opacity: 1;
+}
+/*OBRAZAC*/
+form {
+	padding: 5px;
+	max-width: 50%;
+}
+label,
+input,
+select,
+textarea {
+	margin: 10px 0px 10px 0px;
+	padding: 5px;
+	font-size: 1rem;
+}
+label {
+	font-weight: 600;
+}
+input,
+textarea {
+	margin: 5px;
+	width: 90%;
+}
+textarea {
+	resize: none;
+}
+button {
+	background-color: rgb(255, 115, 115);
+	margin: 10px;
+	padding: 20px;
+	font-size: 1rem;
+}
+button:hover {
+	background-color: red;
+}
+.kontenjer {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	max-width: 100%;
+}
+.bezLoma {
+	flex-wrap: nowrap;
+	white-space: nowrap;
+}
+.sredina {
+	justify-content: center;
+}
+.odabir input {
+	display: none;
+}
+.odabir input + label {
+	margin: 0;
+	font-size: 1.5rem;
+	font-weight: 500;
+	color: #000;
+}
+.odabir input:checked + label,
+.odabir input + label:hover {
+	color: rgb(255, 0, 0);
+}
+.ocjena {
+	direction: rtl;
+	unicode-bidi: bidi-override;
+	margin-left: 5px;
+}
+.ocjena input {
+	display: none;
+}
+.ocjena label {
+	margin: 0;
+	font-size: 2rem;
+	color: #eee;
+}
+.ocjena input:checked ~ label,
+.ocjena label:hover,
+.ocjena label:hover ~ label {
+	color: rgb(255, 217, 0);
+}

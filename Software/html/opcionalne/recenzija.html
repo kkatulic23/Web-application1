@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recenzija</title>
+    <link rel="stylesheet" href="/dizajn/kkatulic23.css" type="text/css">
+    <link rel="stylesheet" href="/dizajn/responzivnost.css" type="text/css">
+    <script src="/JSklijent/kkatulic23.js"></script>
+    <meta name="author" content="Kristian Katulić">
+    <meta name="keywords" content="recenzija, AI alati, ocjena, povratne informacije, preporuka">
+</head>
+
+<body>
+    <header>
+        <h1>Recenzija AI alata</h1>
+        <a href="/index.html">
+            <img src="/resursi/slike/pocetna-logo.png" alt="Pocetna stranica">
+        </a>
+    </header>
+    <nav>
+        <a href="/oAutoru.html">O autoru</a>
+        <a href="/dokumentacija.html">Dokumentacija</a>
+        <a href="/studijeSlucaja.html">Studije slučaja AI alata</a>
+        <a href="/recenzija.html">Recenzija AI alata</a>
+        <a href="/obrazacValidacija">Obrazac validacija</a>
+        <a href="/alati">/alati</a>
+        <a href="/api/alati">/api/alati</a>
+    </nav>
+    <main>
+        <section>
+            <h2>Ostavite recenziju:</h2>
+            <form action="https://spider.foi.hr/OWT/materijali/ispis_forme.php" method="post" id="obrazac1">
+                <h5>Osnovne informacije</h5>
+                <label for="ime">Upiši svoje ime: </label><br>
+                <input type="text" name="ime" id="ime" value="" required><br>
+                <label for="prezime">Upiši svoje prezime: </label><br>
+                <input type="text" name="prezime" id="prezime" value="" required><br>
+                <div class="kontenjer odabir">
+                    <label> Izaberi spol: </label>
+                    <input type="radio" id="musko" name="spol" value="Muško" checked>
+                    <label for="musko">M</label>
+                    <input type="radio" id="zensko" name="spol" value="Žensko">
+                    <label for="zensko">Ž</label>
+                </div><br>
+                <h5>Recenzija</h5>
+                <label for="izbor">Odaberi AI alat: </label>
+                <select name="izbor" id="izbor">
+                    <option value="ChatGPT">ChatGPT</option>
+                    <option value="Microsoft Copilot">Microsoft Copilot</option>
+                    <option value="Perplexity AI">Perplexity AI</option>
+                </select><br>
+                <label for="koristen">Učestalost korištenja: </label>
+                <select name="ucestalost koristenja" id="koristen">
+                    <option value="Dnevno">Dnevno</option>
+                    <option value="Tjedno">Tjedno</option>
+                    <option value="Mjesečno">Mjesečno</option>
+                    <option value="Povremeno">Povremeno</option>
+                </select><br>
+                <div class="kontenjer">
+                    <label>Ocjena učinkovitosti: </label>
+                    <div class="ocjena bezLoma">
+                        <input type="radio" id="zvijezda5.1" name="ocjena ucinkovitosti" value="5">
+                        <label for="zvijezda5.1">&#9733;</label>
+                        <input type="radio" id="zvijezda4.1" name="ocjena ucinkovitosti" value="4">
+                        <label for="zvijezda4.1">&#9733;</label>
+                        <input type="radio" id="zvijezda3.1" name="ocjena ucinkovitosti" value="3">
+                        <label for="zvijezda3.1">&#9733;</label>
+                        <input type="radio" id="zvijezda2.1" name="ocjena ucinkovitosti" value="2">
+                        <label for="zvijezda2.1">&#9733;</label>
+                        <input type="radio" id="zvijezda1.1" name="ocjena ucinkovitosti" value="1">
+                        <label for="zvijezda1.1">&#9733;</label>
+                    </div>
+                </div>
+                <div class="kontenjer">
+                    <label>Ocjena kvalitete odgovora: </label>
+                    <div class="ocjena bezLoma">
+                        <input type="radio" id="zvijezda5.2" name="ocjena kvalitete odgovora" value="5">
+                        <label for="zvijezda5.2">&#9733;</label>
+                        <input type="radio" id="zvijezda4.2" name="ocjena kvalitete odgovora" value="4">
+                        <label for="zvijezda4.2">&#9733;</label>
+                        <input type="radio" id="zvijezda3.2" name="ocjena kvalitete odgovora" value="3">
+                        <label for="zvijezda3.2">&#9733;</label>
+                        <input type="radio" id="zvijezda2.2" name="ocjena kvalitete odgovora" value="2">
+                        <label for="zvijezda2.2">&#9733;</label>
+                        <input type="radio" id="zvijezda1.2" name="ocjena kvalitete odgovora" value="1">
+                        <label for="zvijezda1.2">&#9733;</label>
+                    </div>
+                </div>
+                <div class="kontenjer">
+                    <label>Ocjena brzine odgovora: </label>
+                    <div class="ocjena bezLoma">
+                        <input type="radio" id="zvijezda5.3" name="ocjena brzine odgovora" value="5">
+                        <label for="zvijezda5.3">&#9733;</label>
+                        <input type="radio" id="zvijezda4.3" name="ocjena brzine odgovora" value="4">
+                        <label for="zvijezda4.3">&#9733;</label>
+                        <input type="radio" id="zvijezda3.3" name="ocjena brzine odgovora" value="3">
+                        <label for="zvijezda3.3">&#9733;</label>
+                        <input type="radio" id="zvijezda2.3" name="ocjena brzine odgovora" value="2">
+                        <label for="zvijezda2.3">&#9733;</label>
+                        <input type="radio" id="zvijezda1.3" name="ocjena brzine odgovora" value="1">
+                        <label for="zvijezda1.3">&#9733;</label>
+                    </div>
+                </div>
+                <div class="kontenjer odabir">
+                    <label>Preporučio/la bih ovaj alat drugima: </label>
+                    <span class="bezLoma">
+                        <input type="radio" id="da" name="preporuceno" value="Da" checked>
+                        <label for="da">Da</label>
+                        <input type="radio" id=ne name="preporuceno" value="Ne">
+                        <label for="ne">Ne</label>
+                    </span>
+                </div><br>
+                <div class="kontenjer sredina">
+                    <button type="submit" name="gumb" id="gumb">Pošalji</button>
+                    <button type="reset" name="resetiraj" id="resetiraj">Resetiraj</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <a href="https://chatgpt.com/" target="_blank">
+            <img src="/resursi/slike/chatgpt-logo.png" alt="ChatGPT">
+        </a>
+        <a href="https://copilot.microsoft.com/" target="_blank">
+            <img src="/resursi/slike/copilot-logo.png" alt="Microsoft Copilot">
+        </a>
+        <a href="https://www.perplexity.ai/" target="_blank">
+            <img src="/resursi/slike/perplexity-logo.png" alt="Perplexity">
+        </a>
+        <a href="https://validator.w3.org/check?uri=http://spider.foi.hr:12178/recenzija.html" target="_blank">
+            <img src="https://spider.foi.hr/OWT/materijali/slike/HTML5.png" alt="Validator" class="validacija">
+        </a>
+        <br><br>
+        <div class="sredina">
+            Kristian Katulić &copy; 2025.
+        </div>
+    </footer>
+</body>
+
+</html>

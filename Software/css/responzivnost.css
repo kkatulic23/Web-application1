@@ -1,0 +1,45 @@
+@media (min-width: 1024px) {
+	.zidanje {
+		column-count: 3;
+		column-gap: 1rem;
+	}
+	div.mini img {
+		background-color: #eee;
+		display: inline-block;
+		margin: 0 0 1em;
+		width: 100%;
+	}
+}
+@media (max-width: 800px) {
+	body {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	img.validacija {
+		right: 0;
+	}
+	.uOkvir {
+		width: 280px;
+		height: 157.7px;
+	}
+	table {
+		width: 100%;
+	}
+	form {
+		max-width: 100%;
+	}
+	footer img {
+		max-width: 20%;
+	}
+}
+@media (max-width: 700px) {
+	.okvir-klizac {
+		left: 0;
+		height: 200px;
+		max-width: 100%;
+	}
+	.strelica {
+		background-size: 10px;
+		background-position: 10px 50%;
+	}
+}
